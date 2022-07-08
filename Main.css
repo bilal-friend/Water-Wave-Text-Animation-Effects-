@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+}
+.content {
+  position: relative;
+}
+.content h1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  font-size: 16rem;
+}
+.content h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 3px #03a9f4;
+}
+.content h1:nth-child(2) {
+  color: #03a9f4;
+  animation: wavy 3s ease-in-out infinite;
+}
+@keyframes wavy {
+  0% {
+    clip-path: polygon(
+      0% 40%,
+      12% 36%,
+      27% 33%,
+      36% 36%,
+      43% 42%,
+      51% 47%,
+      60% 47%,
+      76% 41%,
+      85% 44%,
+      90% 49%,
+      100% 54%,
+      100% 100%,
+      0 100%
+    );
+  }
+  50% {
+    clip-path: polygon(
+      0 69%,
+      15% 77%,
+      26% 74%,
+      33% 67%,
+      43% 60%,
+      49% 56%,
+      61% 60%,
+      69% 62%,
+      81% 59%,
+      91% 54%,
+      100% 39%,
+      100% 100%,
+      0 100%
+    );
+  }
+  100% {
+    clip-path: polygon(
+      0% 40%,
+      12% 36%,
+      27% 33%,
+      36% 36%,
+      43% 42%,
+      51% 47%,
+      60% 47%,
+      76% 41%,
+      85% 44%,
+      90% 49%,
+      100% 54%,
+      100% 100%,
+      0 100%
+    );
+  }
+}
+@media (max-width: 800px) {
+  .content h1 {
+    font-size: 9rem;
+  }
+}
+@media (max-width: 450px) {
+  .content h1 {
+    font-size: 5rem;
+  }
+}
